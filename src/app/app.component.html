@@ -1,1 +1,34 @@
-<google-map height="400px" width="100%"></google-map>
+<div class="container">
+  <div class="row mt-3">
+    <div class="col-12">
+      <p-fileUpload
+        id="upload-incident"
+        name="myfile[]"
+        chooseLabel="Choose incident to upload"
+        (onSelect)="onUploadFile($event)"
+        (onClear)="onFileRemoved()"
+        accept=".json"
+        [fileLimit]="1"
+        [showUploadButton]="false"
+      ></p-fileUpload>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-12">
+      <google-map
+        height="500px"
+        width="100%"
+        [center]="center"
+        [options]="options"
+      >
+        <map-marker
+          *ngIf="addressMarker"
+          [position]="addressMarker.position"
+          [label]="addressMarker.label"
+          [title]="addressMarker.title"
+          [options]="addressMarker.options"
+        ></map-marker>
+      </google-map>
+    </div>
+  </div>
+</div>
