@@ -1,27 +1,35 @@
-# Incident
+# Summary
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.1.
+This application is able to upload an incident JSON file and display the location of the incident and metadata including the weather at the time of the incident. I spent a total time of approximately 8 hours on this project.
 
-## Development server
+## Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+To Install this app:
 
-## Code scaffolding
+- Install the latest LTS release node.js
+- Install the latest Angular CLI
+  ```console
+  user@yourcomputer: ~$ npm install -g @angular/cli
+  ```
+- Clone this repo to your desired location
+- Run npm install in the root of the download source
+  ```console
+  user@yourcomputer: ~$ npm install -g
+  ```
+- Run ng serve
+  ```console
+  user@yourcomputer: ~$ ng serve
+  ```
+- Navigate to http://localhost:4200 in your browser
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## How to use the app
 
-## Build
+Click the "Choose incident to upload" button to upload a JSON file that contains the incident (this file needs to be in the exact format as what was supplied in the project instructions zip file). Once you see a marker on the map, the user can click the marker to view a subset of the metadata. To try a different file click the "Cancel" button at the top, and then re-upload a different file via the "Choose incident to upload" button.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Example
 
-## Running unit tests
+![Alt text](example.png "Optional title")
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Production Build
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+A production build would apply API keys in a config or in environmental variables. Additionally, unit tests would be written to validate core functionality. A login page would also be added as well seperating key features into modules. I would have also forced all observables to unsubscribe when leaving the page. Technically, the http library in Angular should automatically destroy all API calls.

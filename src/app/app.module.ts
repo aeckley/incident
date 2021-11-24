@@ -9,6 +9,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
 import { FileUploadModule } from 'primeng/fileupload';
 import { HttpClientModule } from '@angular/common/http';
 import {ButtonModule} from 'primeng/button';
+import { WeatherService } from './services/weather.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import {ButtonModule} from 'primeng/button';
     HttpClientModule,
     ButtonModule
   ],
-  providers: [],
+  providers: [WeatherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -22,12 +22,64 @@
         [options]="options"
       >
         <map-marker
+          #marker="mapMarker"
           *ngIf="addressMarker"
           [position]="addressMarker.position"
           [label]="addressMarker.label"
           [title]="addressMarker.title"
           [options]="addressMarker.options"
+          (mapClick)="openInfo(marker)"
         ></map-marker>
+        <map-info-window>
+          <div>
+            <label class="mr-2" for="name">Name:&nbsp;</label>
+            <span class="ml-2" id="name">{{ incident?.address?.name }}</span>
+          </div>
+          <div class="mt-1">
+            <label class="mr-2" for="name">Address:&nbsp;</label>
+            <span class="ml-2" id="name">{{
+              incident?.address?.address_line1 +
+                ", " +
+                incident?.address?.city +
+                ", " +
+                incident?.address?.state +
+                " " +
+                incident?.address?.postal_code
+            }}</span>
+          </div>
+          <div class="mt-1">
+            <label class="mr-2" for="name">Date / Time:&nbsp;</label>
+            <span class="ml-2" id="name">{{
+              incident?.description?.event_opened | date: "short":"EDT"
+            }}</span>
+          </div>
+          <div class="mt-1">
+            <label class="mr-2" for="name">Type:&nbsp;</label>
+            <span class="ml-2" id="name">{{
+              incident?.description?.type
+            }}</span>
+          </div>
+          <div class="mt-1">
+            <label class="mr-2" for="name">Sub Type:&nbsp;</label>
+            <span class="ml-2" id="name">{{
+              incident?.description?.subtype
+            }}</span>
+          </div>
+          <div class="mt-1">
+            <label class="mr-2" for="name">Temperature:&nbsp;</label>
+            <span class="ml-2" id="name">{{ incidentWeather?.temp }}</span>
+          </div>
+          <div class="mt-1">
+            <label class="mr-2" for="name">Precipitation:&nbsp;</label>
+            <span class="ml-2" id="name">{{
+              incidentWeather?.precipitation
+            }}</span>
+          </div>
+          <div class="mt-1">
+            <label class="mr-2" for="name">Wind Speed:&nbsp;</label>
+            <span class="ml-2" id="name">{{ incidentWeather?.windspeed }}</span>
+          </div>
+        </map-info-window>
       </google-map>
     </div>
   </div>
