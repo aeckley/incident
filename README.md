@@ -1,12 +1,12 @@
 # Summary
 
-This application is able to upload an incident JSON file and display the location of the incident and metadata including the weather at the time of the incident. I spent a total time of approximately 8 hours on this project.
+This application can upload an incident JSON file, display the location of the incident and metadata including the weather at the time of the incident. I spent approximately 8 hours on this project, including several breaks.
 
 ## Installation
 
 To Install this app:
 
-- Install the latest LTS release node.js
+- Install the latest LTS release of node.js
 - Install the latest Angular CLI
   ```console
   user@yourcomputer: ~$ npm install -g @angular/cli
@@ -14,7 +14,7 @@ To Install this app:
 - Clone this repo to your desired location
 - Run npm install in the root of the download source
   ```console
-  user@yourcomputer: ~$ npm install -g
+  user@yourcomputer: ~$ npm install
   ```
 - Run ng serve
   ```console
@@ -32,4 +32,4 @@ Click the "Choose incident to upload" button to upload a JSON file that contains
 
 ## Production Build
 
-A production build would apply API keys in a config or in environmental variables. Additionally, unit tests would be written to validate core functionality. A login page would also be added as well seperating key features into modules. I would have also forced all observables to unsubscribe when leaving the page. Technically, the http library in Angular should automatically destroy all API calls.
+In a production build, I would apply API keys in a config or in environmental variables. Additionally, unit tests would be written to validate core functionality and solve for different potential variables that could arise in the JSON file. A login page would also be added as well seperating key features into modules. I would have also forced all observables to unsubscribe when leaving the page. Technically, the http library in Angular should automatically destroy all API calls.
