@@ -28,7 +28,7 @@ Click the "Choose incident to upload" button to upload a JSON file that contains
 
 ## Example
 
-![Alt text](./example.png "Optional title")
+![ScreenShot](example.png "Example Picture")
 
 ## Production Build
 
