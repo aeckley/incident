@@ -34,6 +34,7 @@ export class WeatherService {
   private getHeaders(): HttpHeaders {
     let headers = new HttpHeaders();
     headers = headers.append('x-rapidapi-host', 'meteostat.p.rapidapi.com');
+    // In production I would store api keys in a config or in an env variable
     headers = headers.append('x-rapidapi-key', 'af9fd6fba2mshd7d82655c4af8c1p1f6455jsnfdc0949bb7d7');
     return headers;
   }
