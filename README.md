@@ -28,7 +28,7 @@ Click the "Choose incident to upload" button to upload a JSON file that contains
 
 ## Example
 
-![ScreenShot](example.png "Example Picture")
+![ScreenShot](https://github.com/aeckley/incident/example.png "Example Picture")
 
 ## Production Build
 
